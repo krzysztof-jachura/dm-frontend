@@ -22,7 +22,7 @@ const UserCard = ({
           avatarProps={{
             src: user.avatar,
           }}
-          className="hidden sm:visible"
+          className="hidden sm:flex"
         />
       )}
       {isLoading && (

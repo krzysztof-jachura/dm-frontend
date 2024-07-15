@@ -44,7 +44,7 @@ const App = () => {
         classNames={{
           base: 'bg-default-50',
           wrapper: 'gap-0 sm:gap-4',
-          brand: 'hidden sm:visible',
+          brand: 'hidden sm:block',
         }}
       >
         <NavbarBrand>
