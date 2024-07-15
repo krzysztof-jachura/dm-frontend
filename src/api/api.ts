@@ -11,7 +11,9 @@ export const logoutUser = async () => {
 };
 
 export const pullSeries = async () => {
-  return fetchWrapper<Series[]>('/api/series');
+  const series = await fetchWrapper<Series[]>('/api/series');
+  // Sort series by name
+  return series.sort((a, b) => a.name.localeCompare(b.name));
 };
 
 export const pullTracks = async () => {
