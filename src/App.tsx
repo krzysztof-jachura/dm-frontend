@@ -1,11 +1,12 @@
-import React, { lazy } from 'react';
-import { Image, Navbar, NavbarBrand, NavbarContent, NavbarItem } from '@nextui-org/react';
+import React, { lazy, Suspense } from 'react';
+import { Image, Navbar, NavbarBrand, NavbarContent, NavbarItem, Spinner } from '@nextui-org/react';
 import UserCard from '@/components/user-card';
 import LoginButton from '@/components/login-button';
 import { logoutUser, pullUser } from '@/api/api';
 import { useQuery } from '@tanstack/react-query';
 import { Route, Routes, useMatch } from 'react-router-dom';
 
+const Home = lazy(() => import('./pages/home/Home'));
 const CreateSignupPage = lazy(() => import('./pages/signups/CreateSignupPage'));
 
 const App = () => {
@@ -79,10 +80,15 @@ const App = () => {
         </NavbarContent>
       </Navbar>
 
-      <div className="w-full h-full px-6 sm:my-auto flex flex-col items-center">
-        <Routes>
-          <Route path="/signups" element={<CreateSignupPage />} />
-        </Routes>
+      <div className="flex flex-1 flex-col px-6 py-0 sm:py-6">
+        <Suspense
+          fallback={<Spinner color="primary" size="lg" className="absolute top-1/2 left-1/2" />}
+        >
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/signups" element={<CreateSignupPage />} />
+          </Routes>
+        </Suspense>
       </div>
     </div>
   );

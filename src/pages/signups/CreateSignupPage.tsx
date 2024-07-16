@@ -45,7 +45,7 @@ const CreateSignupPage = () => {
   return (
     <div className="flex flex-col gap-4 w-[700px] max-w-full mx-auto my-auto pb-4">
       <form
-        className="flex flex-col gap-4 w-[700px] max-w-full mx-auto my-auto pb-4"
+        className="flex flex-col gap-4 w-[700px] max-w-full mx-auto my-auto"
         onSubmit={formMethods.handleSubmit(onSubmit)}
       >
         <I18nProvider locale="en-GB">
