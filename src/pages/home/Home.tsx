@@ -15,7 +15,7 @@ const Home = () => {
         <h1 className="text-2xl sm:text-4xl font-bold text-center tracking-tight">
           Welcome to Driver Manager
         </h1>
-        <h2 className="text-lg sm:text-2xl font-light text-center mt-4">
+        <h2 className="text-lg sm:text-2xl font-light text-center mt-2 sm:mt-4">
           Here are some things you can try out:
         </h2>
       </div>
