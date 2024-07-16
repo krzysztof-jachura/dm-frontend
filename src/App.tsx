@@ -39,7 +39,7 @@ const App = () => {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen gap-8 sm:gap-2 overflow-y-auto">
+    <div className="flex flex-col w-full min-h-screen overflow-y-auto">
       <Navbar
         maxWidth="full"
         classNames={{
@@ -80,7 +80,7 @@ const App = () => {
         </NavbarContent>
       </Navbar>
 
-      <div className="flex flex-1 flex-col px-6 py-0 sm:py-6">
+      <div className="flex flex-1 flex-col p-6">
         <Suspense
           fallback={<Spinner color="primary" size="lg" className="absolute top-1/2 left-1/2" />}
         >
