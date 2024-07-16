@@ -23,15 +23,15 @@ const RouteCard = ({
       isHoverable
       as={Link}
       to={to}
-      className="p-5 select-none"
-      classNames={{ header: 'p-0 mb-2', body: 'p-0' }}
+      className="p-4 sm:p-5 select-none"
+      classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
       shadow="sm"
     >
       <div className="flex items-center">
         {icon}
-        <div className="flex flex-col pl-5">
-          <CardHeader className={`text-xl ${color}`}>{title}</CardHeader>
-          <CardBody className="text-medium sm:text-lg font-light text-neutral-400">
+        <div className="flex flex-col pl-4 sm:pl-5">
+          <CardHeader className={`text-lg sm:text-xl ${color}`}>{title}</CardHeader>
+          <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
             {description}
           </CardBody>
         </div>

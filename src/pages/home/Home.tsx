@@ -19,7 +19,7 @@ const Home = () => {
           Here are some things you can try out:
         </h2>
       </div>
-      <div className="flex flex-col gap-5 mt-20 w-fit-content mx-auto">
+      <div className="flex flex-col gap-5 mt-6 sm:mt-20 w-fit-content mx-auto">
         <RouteCard
           to="/signups"
           title="Signup Creation"
@@ -29,15 +29,15 @@ const Home = () => {
         />
         <Card
           isDisabled
-          className="p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-2', body: 'p-0' }}
+          className="p-4 sm:p-5 select-none hover:cursor-default"
+          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
           shadow="sm"
         >
           <div className="flex items-center">
             <GalleryHorizontalEndIcon size={32} className="min-w-[32px] text-primary-500" />
-            <div className="flex flex-col pl-5">
-              <CardHeader className="text-xl text-primary-500">Series</CardHeader>
-              <CardBody className="text-medium sm:text-lg font-light text-neutral-400">
+            <div className="flex flex-col pl-4 sm:pl-5">
+              <CardHeader className="text-lg sm:text-xl text-primary-500">Series</CardHeader>
+              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
                 View, manage and create series
               </CardBody>
             </div>
@@ -45,15 +45,15 @@ const Home = () => {
         </Card>
         <Card
           isDisabled
-          className="p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-2', body: 'p-0' }}
+          className="p-4 sm:p-5 select-none hover:cursor-default"
+          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
           shadow="sm"
         >
           <div className="flex items-center">
             <FlagIcon size={32} className="min-w-[32px] text-danger" />
-            <div className="flex flex-col pl-5">
-              <CardHeader className="text-xl text-danger">Races</CardHeader>
-              <CardBody className="text-medium sm:text-lg font-light text-neutral-400">
+            <div className="flex flex-col pl-4 sm:pl-5">
+              <CardHeader className="text-lg sm:text-xl text-danger">Races</CardHeader>
+              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
                 View and manage upcoming races
               </CardBody>
             </div>
@@ -61,15 +61,15 @@ const Home = () => {
         </Card>
         <Card
           isDisabled
-          className="p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-2', body: 'p-0' }}
+          className="p-4 sm:p-5 select-none hover:cursor-default"
+          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
           shadow="sm"
         >
           <div className="flex items-center">
             <Users2Icon size={32} className="min-w-[32px] text-yellow-500" />
-            <div className="flex flex-col pl-5">
-              <CardHeader className="text-xl text-yellow-500">Team Members</CardHeader>
-              <CardBody className="text-medium sm:text-lg font-light text-neutral-400">
+            <div className="flex flex-col pl-4 sm:pl-5">
+              <CardHeader className="text-lg sm:text-xl text-yellow-500">Team Members</CardHeader>
+              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
                 Have a look at the list of team members, their stats and more
               </CardBody>
             </div>
