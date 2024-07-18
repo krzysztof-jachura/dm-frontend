@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardHeader } from '@nextui-org/react';
+import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
 import {
   FlagIcon,
   GalleryHorizontalEndIcon,
@@ -19,7 +19,7 @@ const Home = () => {
           Here are some things you can try out:
         </h2>
       </div>
-      <div className="flex flex-col gap-5 mt-6 sm:mt-20 w-fit-content mx-auto">
+      <div className="flex flex-col gap-5 mt-6 sm:mt-16 w-fit-content mx-auto">
         <RouteCard
           to="/signups"
           title="Signup Creation"
@@ -27,6 +27,13 @@ const Home = () => {
           icon={<MessageSquarePlusIcon size={32} className="min-w-[32px] text-green-500" />}
           color={'text-green-500'}
         />
+
+        <div className="mt-2 sm:mt-6">
+          <h3 className="text-lg sm:text-xl text-default-400 uppercase text-center tracking-wide">
+            Coming Soon
+          </h3>
+          <Divider className="w-full mt-2" />
+        </div>
         <Card
           isDisabled
           className="p-4 sm:p-5 select-none hover:cursor-default"
