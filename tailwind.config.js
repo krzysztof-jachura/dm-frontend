@@ -29,7 +29,7 @@ module.exports = {
           },
           colors: {
             danger: '#e20031',
-          }
+          },
         },
       },
     }),
