@@ -8,6 +8,7 @@ interface RouteCardProps {
   description: string;
   icon: ReactElement;
   color?: string;
+  isDisabled?: boolean;
 }
 
 const RouteCard = ({
@@ -16,13 +17,15 @@ const RouteCard = ({
   description,
   icon,
   color = 'text-primary-500',
+  isDisabled = false,
 }: RouteCardProps) => {
   return (
     <Card
-      isPressable
-      isHoverable
+      isDisabled={isDisabled}
+      isPressable={!isDisabled}
+      isHoverable={!isDisabled}
       as={Link}
-      to={to}
+      to={!isDisabled ? to : undefined}
       className="p-4 sm:p-5 select-none"
       classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
       shadow="sm"

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Divider } from '@nextui-org/react';
+import { Divider } from '@nextui-org/react';
 import {
   FlagIcon,
   GalleryHorizontalEndIcon,
@@ -25,7 +25,7 @@ const Home = () => {
           title="Signup Creation"
           description="Create a custom race with a scheduled Discord signup"
           icon={<MessageSquarePlusIcon size={32} className="min-w-[32px] text-green-500" />}
-          color={'text-green-500'}
+          color="text-green-500"
         />
 
         <div className="mt-2 sm:mt-6">
@@ -34,54 +34,30 @@ const Home = () => {
           </h3>
           <Divider className="w-full mt-2" />
         </div>
-        <Card
+        <RouteCard
           isDisabled
-          className="p-4 sm:p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
-          shadow="sm"
-        >
-          <div className="flex items-center">
-            <GalleryHorizontalEndIcon size={32} className="min-w-[32px] text-primary-500" />
-            <div className="flex flex-col pl-4 sm:pl-5">
-              <CardHeader className="text-lg sm:text-xl text-primary-500">Series</CardHeader>
-              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
-                View, manage and create series
-              </CardBody>
-            </div>
-          </div>
-        </Card>
-        <Card
+          to="/series"
+          title="Series"
+          description="View, manage and create series"
+          icon={<GalleryHorizontalEndIcon size={32} className="min-w-[32px] text-primary-500" />}
+          color="text-primary-500"
+        />
+        <RouteCard
           isDisabled
-          className="p-4 sm:p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
-          shadow="sm"
-        >
-          <div className="flex items-center">
-            <FlagIcon size={32} className="min-w-[32px] text-danger" />
-            <div className="flex flex-col pl-4 sm:pl-5">
-              <CardHeader className="text-lg sm:text-xl text-danger">Races</CardHeader>
-              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
-                View and manage upcoming races
-              </CardBody>
-            </div>
-          </div>
-        </Card>
-        <Card
+          to="/races"
+          title="Races"
+          description="View and manage upcoming races"
+          icon={<FlagIcon size={32} className="min-w-[32px] text-danger" />}
+          color="text-danger"
+        />
+        <RouteCard
           isDisabled
-          className="p-4 sm:p-5 select-none hover:cursor-default"
-          classNames={{ header: 'p-0 mb-1 sm:mb-2', body: 'p-0' }}
-          shadow="sm"
-        >
-          <div className="flex items-center">
-            <Users2Icon size={32} className="min-w-[32px] text-yellow-500" />
-            <div className="flex flex-col pl-4 sm:pl-5">
-              <CardHeader className="text-lg sm:text-xl text-yellow-500">Team Members</CardHeader>
-              <CardBody className="text-sm sm:text-lg font-light text-neutral-400">
-                Have a look at the list of team members, their stats and more
-              </CardBody>
-            </div>
-          </div>
-        </Card>
+          to="/members"
+          title="Team Members"
+          description="Have a look at the list of team members, their stats and more"
+          icon={<Users2Icon size={32} className="min-w-[32px] text-yellow-500" />}
+          color="text-yellow-500"
+        />
       </div>
     </>
   );
