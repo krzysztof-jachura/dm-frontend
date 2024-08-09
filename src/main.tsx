@@ -11,7 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 const queryClient = new QueryClient();
 
 const Providers = () => (
-  <NextUIProvider className="bg-[#0c0c0c]" locale="en-GB">
+  <NextUIProvider className="bg-dark-background" locale="en-GB">
     <QueryClientProvider client={queryClient}>
       <BrowserRouter basename={process.env.BASEPATH}>
         <App />

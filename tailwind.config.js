@@ -9,7 +9,13 @@ module.exports = {
     './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "dark-background": "#0c0c0c",
+        "discord-normal": "#5865f2",
+        "discord-hover": "#4c51bf",
+      },
+    },
     fontFamily: {
       sans: ['Lexend', 'sans-serif'],
     },

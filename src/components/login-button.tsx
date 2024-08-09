@@ -17,7 +17,10 @@ const LoginButton = ({ onClick, className }: LoginButtonProps) => {
       }
       as={Link}
       onClick={onClick}
-      className={'bg-[#5865F2] hover:bg-[#4C51BF] text-medium' + (className ? ` ${className}` : '')}
+      className={
+        'bg-discord-normal hover:bg-discord-hover text-medium text-white' +
+        (className ? ` ${className}` : '')
+      }
     >
       Sign In
     </Button>
