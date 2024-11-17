@@ -3,7 +3,7 @@ import { Controller, useFormContext } from 'react-hook-form';
 import { now } from '@internationalized/date';
 import React, { useState } from 'react';
 
-const ScheduledSignupDateInput = () => {
+const SignupDateInput = () => {
   const { control, setValue } = useFormContext();
 
   const [submitImmediately, setSubmitImmediately] = useState<boolean>(true);
@@ -20,8 +20,8 @@ const ScheduledSignupDateInput = () => {
         onSelectionChange={index => {
           const value = !+index;
           value
-            ? setValue('scheduledSignupDate', null)
-            : setValue('scheduledSignupDate', now('GMT').toDate().toISOString());
+            ? setValue('signupDate', null)
+            : setValue('signupDate', now('GMT').toDate().toISOString());
           setSubmitImmediately(value);
         }}
       >
@@ -30,7 +30,7 @@ const ScheduledSignupDateInput = () => {
       </Tabs>
       {submitImmediately ? null : (
         <Controller
-          name={'scheduledSignupDate'}
+          name={'signupDate'}
           control={control}
           defaultValue={now('GMT').toDate().toISOString()}
           render={({ field: { onChange } }) => (
@@ -54,4 +54,4 @@ const ScheduledSignupDateInput = () => {
   );
 };
 
-export default ScheduledSignupDateInput;
+export default SignupDateInput;

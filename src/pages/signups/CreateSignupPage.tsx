@@ -7,7 +7,7 @@ import { I18nProvider } from '@react-aria/i18n';
 import { Button, Input } from '@nextui-org/react';
 import CarClassesInput from '@/pages/signups/components/CarClassesInput';
 import TimeslotsInput from '@/pages/signups/components/TimeslotsInput';
-import ScheduledSignupDateInput from '@/pages/signups/components/ScheduledSignupDateInput';
+import SignupDateInput from '@/pages/signups/components/SignupDateInput';
 import DurationInput from '@/pages/signups/components/DurationInput';
 import { submitSignup } from '@/api/api';
 import { useMutation } from '@tanstack/react-query';
@@ -21,7 +21,7 @@ export type SignupFormData = {
   classes: string[];
   timeslots: string[];
   discordChannelId: string;
-  scheduledSignupDate?: string;
+  signupDate?: string;
   logo?: string;
 };
 
@@ -77,7 +77,7 @@ const CreateSignupPage = () => {
             <DurationInput />
             <CarClassesInput />
             <TimeslotsInput />
-            <ScheduledSignupDateInput />
+            <SignupDateInput />
             <SignupChannelSelect />
 
             <Button
