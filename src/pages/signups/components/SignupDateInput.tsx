@@ -19,9 +19,11 @@ const SignupDateInput = () => {
         }}
         onSelectionChange={index => {
           const value = !+index;
-          value
-            ? setValue('signupDate', null)
-            : setValue('signupDate', now('GMT').toDate().toISOString());
+          if (value) {
+            setValue('signupDate', null);
+          } else {
+            setValue('signupDate', now('GMT').toDate().toISOString());
+          }
           setSubmitImmediately(value);
         }}
       >
@@ -44,7 +46,7 @@ const SignupDateInput = () => {
               label="Submission day:"
               defaultValue={now('GMT')}
               onChange={date => {
-                onChange(date.toDate().toISOString());
+                onChange(date?.toDate().toISOString());
               }}
             />
           )}
