@@ -38,7 +38,7 @@ const TimeslotsInput = () => {
                 label={`Timeslot ${index + 1} start time (GMT):`}
                 defaultValue={now('GMT')}
                 onChange={date => {
-                  field.onChange(date.toDate().toISOString());
+                  field.onChange(date?.toDate().toISOString());
                 }}
               />
             )}
