@@ -47,7 +47,7 @@ const TimeslotsInput = () => {
             <DeleteButton
               onClick={() => {
                 if (timeslotFields.length > 1) {
-                  navigator.vibrate(10);
+                  if ('vibrate' in navigator) navigator.vibrate(10);
                   removeTimeslot(index);
                 }
               }}
@@ -59,8 +59,8 @@ const TimeslotsInput = () => {
         className="mt-2 w-full"
         color="primary"
         variant="ghost"
-        onClick={() => {
-          navigator.vibrate(10);
+        onPress={() => {
+          if ('vibrate' in navigator) navigator.vibrate(10);
           addTimeslot(' ');
         }}
       >

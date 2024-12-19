@@ -54,7 +54,7 @@ const CarClassesInput = () => {
                 <DeleteButton
                   onClick={() => {
                     if (carClassFields.length > 1) {
-                      navigator.vibrate(10);
+                      if ('vibrate' in navigator) navigator.vibrate(10);
                       removeCarClass(index);
                     }
                   }}
@@ -68,10 +68,10 @@ const CarClassesInput = () => {
         className="mt-2 w-full"
         color="primary"
         variant="ghost"
-        onClick={() => {
+        onPress={() => {
           // @ts-expect-error comparison
           if (carClassFields[carClassFields.length - 1] !== '') {
-            navigator.vibrate(10);
+            if ('vibrate' in navigator) navigator.vibrate(10);
             addCarClass(`Class ${carClassFields.length + 1}`);
           }
         }}

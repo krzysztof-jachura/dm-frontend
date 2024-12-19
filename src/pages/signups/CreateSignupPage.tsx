@@ -84,7 +84,9 @@ const CreateSignupPage = () => {
               className="mt-4 w-full text-medium"
               color="primary"
               type="submit"
-              onClick={() => navigator.vibrate(10)}
+              onPress={() => {
+                if ('vibrate' in navigator) navigator.vibrate(10);
+              }}
               isLoading={isPending}
             >
               Create Signup

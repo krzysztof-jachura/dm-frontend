@@ -15,7 +15,7 @@ const SignupDateInput = () => {
         classNames={{ tabList: 'w-full' }}
         color="primary"
         onClick={() => {
-          navigator.vibrate(10);
+          if ('vibrate' in navigator) navigator.vibrate(10);
         }}
         onSelectionChange={index => {
           const value = !+index;
