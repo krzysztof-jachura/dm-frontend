@@ -1,8 +1,10 @@
+import TeamPermissions from '@customTypes/team-permissions';
+
 export interface User {
   id: string;
   name: string;
   avatar: string;
-  role: 'manager' | 'driver';
+  role: TeamPermissions;
 }
 
 export interface Series {
