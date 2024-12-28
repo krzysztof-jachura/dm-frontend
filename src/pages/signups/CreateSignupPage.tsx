@@ -1,15 +1,15 @@
 import React from 'react';
 import { FormProvider, useForm } from 'react-hook-form';
-import SeriesSelect from '@/pages/signups/components/SeriesSelect';
-import TrackAutocomplete from '@/pages/signups/components/TrackAutocomplete';
-import SignupChannelSelect from '@/pages/signups/components/SignupChannelSelect';
+import SeriesSelect from '@pages/signups/components/SeriesSelect';
+import TrackAutocomplete from '@pages/signups/components/TrackAutocomplete';
+import SignupChannelSelect from '@pages/signups/components/SignupChannelSelect';
 import { I18nProvider } from '@react-aria/i18n';
 import { Button, Input } from '@nextui-org/react';
-import CarClassesInput from '@/pages/signups/components/CarClassesInput';
-import TimeslotsInput from '@/pages/signups/components/TimeslotsInput';
-import SignupDateInput from '@/pages/signups/components/SignupDateInput';
-import DurationInput from '@/pages/signups/components/DurationInput';
-import { submitSignup } from '@/api/api';
+import CarClassesInput from '@pages/signups/components/CarClassesInput';
+import TimeslotsInput from '@pages/signups/components/TimeslotsInput';
+import SignupDateInput from '@pages/signups/components/SignupDateInput';
+import DurationInput from '@pages/signups/components/DurationInput';
+import { submitSignup } from '@api/actions';
 import { useMutation } from '@tanstack/react-query';
 
 export type SignupFormData = {

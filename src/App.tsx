@@ -8,6 +8,8 @@ import { Route, Routes, useMatch } from 'react-router-dom';
 
 const Home = lazy(() => import('./pages/home/Home'));
 const CreateSignupPage = lazy(() => import('./pages/signups/CreateSignupPage'));
+const Home = lazy(() => import('@pages/home'));
+const CreateSignupPage = lazy(() => import('@pages/signups'));
 
 const App = () => {
   const signupRouteMatch = useMatch('/signups');

@@ -1,4 +1,4 @@
-import xSvg from '@/svg/x-icon';
+import xSvg from '@svg/x-icon';
 import { Button } from '@nextui-org/react';
 import React from 'react';
 

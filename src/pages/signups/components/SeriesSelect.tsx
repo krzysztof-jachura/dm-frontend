@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { pullSeries } from '@/api/api';
+import { pullSeries } from '@api/actions';
 import { Select, SelectItem } from '@nextui-org/react';
 import React from 'react';
 import { useFormContext } from 'react-hook-form';

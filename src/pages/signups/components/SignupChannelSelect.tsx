@@ -1,7 +1,7 @@
 import React from 'react';
 import { Select, SelectItem } from '@nextui-org/react';
 import { useQuery } from '@tanstack/react-query';
-import { pullChannels } from '@/api/api';
+import { pullChannels } from '@api/actions';
 import { useFormContext } from 'react-hook-form';
 
 const SignupChannelSelect = () => {

@@ -1,5 +1,5 @@
 import { Button, Input } from '@nextui-org/react';
-import { DeleteButton } from '@/components/delete-button';
+import { DeleteButton } from '@components/DeleteButton';
 import React from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 
