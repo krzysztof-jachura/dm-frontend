@@ -90,7 +90,7 @@ const NavBarItems = () => {
       >
         <div className="flex mb-3">
           {userError || userRefetchError ? (
-            <LoginButton className="my-auto mx-auto" onClick={handleLogin} />
+            <LoginButton className="my-auto mx-auto" onPress={handleLogin} />
           ) : (
             <UserCard
               className="mx-auto rounded-lg flex flex-row min-w-60 gap-8 md:gap-2 items-center justify-between justify-self-end"
@@ -150,7 +150,7 @@ const NavBarTop = () => {
     <div className="fixed z-50 top-0 w-full h-[60px] md:hidden flex flex-row bg-default-50 justify-between items-center px-4">
       <BrandNavButton />
       <Button
-        onClick={() => setToggled()}
+        onPress={() => setToggled()}
         radius="none"
         size="lg"
         isIconOnly

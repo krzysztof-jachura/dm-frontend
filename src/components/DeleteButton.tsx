@@ -4,10 +4,10 @@ import React from 'react';
 
 interface DeleteButtonProps {
   className?: string;
-  onClick?: () => void;
+  onPress?: () => void;
 }
 
-export const DeleteButton = ({ onClick, className }: DeleteButtonProps) => {
+export const DeleteButton = ({ onPress, className }: DeleteButtonProps) => {
   return (
     <Button
       className={'bg-transparent hover:bg-danger text-danger hover:text-white ' + className}
@@ -15,7 +15,7 @@ export const DeleteButton = ({ onClick, className }: DeleteButtonProps) => {
       size="md"
       color="danger"
       variant="bordered"
-      onClick={onClick}
+      onPress={onPress}
     >
       {xSvg}
     </Button>

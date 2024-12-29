@@ -3,10 +3,10 @@ import React from 'react';
 
 interface LoginButtonProps {
   className?: string;
-  onClick?: () => void;
+  onPress?: () => void;
 }
 
-const LoginButton = ({ onClick, className }: LoginButtonProps) => {
+const LoginButton = ({ onPress, className }: LoginButtonProps) => {
   return (
     <Button
       startContent={
@@ -18,7 +18,7 @@ const LoginButton = ({ onClick, className }: LoginButtonProps) => {
         />
       }
       as={Link}
-      onClick={onClick}
+      onPress={onPress}
       className={cn('bg-discord-normal hover:bg-discord-hover text-medium text-white', className)}
     >
       Sign In

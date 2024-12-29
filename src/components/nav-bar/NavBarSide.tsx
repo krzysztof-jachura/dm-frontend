@@ -72,7 +72,7 @@ const NavBarSide = () => {
         )}
       </div>
       {userError || userRefetchError ? (
-        <LoginButton className="justify-self-end my-auto" onClick={handleLogin} />
+        <LoginButton className="justify-self-end my-auto" onPress={handleLogin} />
       ) : (
         <UserCard
           className="mx-auto rounded-lg flex flex-row min-w-60 gap-2 items-center justify-between justify-self-end"

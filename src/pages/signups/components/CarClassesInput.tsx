@@ -52,7 +52,7 @@ const CarClassesInput = () => {
               />
               {carClassFields.length === 1 ? null : (
                 <DeleteButton
-                  onClick={() => {
+                  onPress={() => {
                     if (carClassFields.length > 1) {
                       if ('vibrate' in navigator) navigator.vibrate(10);
                       removeCarClass(index);

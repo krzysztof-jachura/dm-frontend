@@ -44,7 +44,7 @@ const UserCard = ({
           className="mt-1 font-bold"
           color="danger"
           variant="ghost"
-          onClick={onLogout}
+          onPress={onLogout}
         >
           Log out
         </Button>

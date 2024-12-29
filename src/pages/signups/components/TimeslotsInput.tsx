@@ -45,7 +45,7 @@ const TimeslotsInput = () => {
           />
           {timeslotFields.length === 1 ? null : (
             <DeleteButton
-              onClick={() => {
+              onPress={() => {
                 if (timeslotFields.length > 1) {
                   if ('vibrate' in navigator) navigator.vibrate(10);
                   removeTimeslot(index);
