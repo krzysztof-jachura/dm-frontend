@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
 const env = loadEnv(mode, process.cwd());
 
   return {
-    base: JSON.stringify(env.VITE_BASEPATH) || '/',
+    base: env.VITE_BASEPATH || '/',
     plugins: [react(), tsconfigPaths()],
     server: {
       host: '0.0.0.0',
