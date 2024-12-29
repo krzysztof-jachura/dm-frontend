@@ -1,6 +1,6 @@
-import { Series, Track, User } from '@/api/api-types';
-import fetchWrapper from '@/api/fetch-wrapper';
-import { SignupFormData } from '@/pages/signups/CreateSignupPage';
+import { Series, Track, User } from '@api/api-types';
+import fetchWrapper from '@api/fetch-wrapper';
+import { SignupFormData } from '@pages/signups/CreateSignupPage';
 
 export const pullUser = async () => {
   return fetchWrapper<User>('/api/auth/status');

@@ -1,5 +1,5 @@
 import { Button, Input } from '@nextui-org/react';
-import { DeleteButton } from '@/components/delete-button';
+import { DeleteButton } from '@components/DeleteButton';
 import React from 'react';
 import { useFieldArray, useFormContext } from 'react-hook-form';
 
@@ -52,7 +52,7 @@ const CarClassesInput = () => {
               />
               {carClassFields.length === 1 ? null : (
                 <DeleteButton
-                  onClick={() => {
+                  onPress={() => {
                     if (carClassFields.length > 1) {
                       if ('vibrate' in navigator) navigator.vibrate(10);
                       removeCarClass(index);

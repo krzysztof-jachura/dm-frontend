@@ -6,7 +6,7 @@ import {
   MessageSquarePlusIcon,
   Users2Icon,
 } from 'lucide-react';
-import RouteCard from '@/pages/home/components/RouteCard';
+import RouteCard from '@pages/home/components/RouteCard';
 
 const Home = () => {
   return (

@@ -1,7 +1,7 @@
 import { Controller, useFieldArray, useFormContext } from 'react-hook-form';
 import { Button, DatePicker } from '@nextui-org/react';
 import { now } from '@internationalized/date';
-import { DeleteButton } from '@/components/delete-button';
+import { DeleteButton } from '@components/DeleteButton';
 import React from 'react';
 
 const TimeslotsInput = () => {
@@ -45,7 +45,7 @@ const TimeslotsInput = () => {
           />
           {timeslotFields.length === 1 ? null : (
             <DeleteButton
-              onClick={() => {
+              onPress={() => {
                 if (timeslotFields.length > 1) {
                   if ('vibrate' in navigator) navigator.vibrate(10);
                   removeTimeslot(index);

@@ -13,6 +13,9 @@ export default {
         "discord-normal": "#5865f2",
         "discord-hover": "#4c51bf",
       },
+      screens: {
+        'md': '890px',
+      },
     },
     fontFamily: {
       sans: ['Lexend', 'sans-serif'],

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { pullTracks } from '@/api/api';
+import { pullTracks } from '@api/actions';
 import { Autocomplete, AutocompleteItem } from '@nextui-org/react';
 import { useFormContext } from 'react-hook-form';
 
