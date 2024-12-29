@@ -13,7 +13,7 @@ const queryClient = new QueryClient();
 const Providers = () => (
   <NextUIProvider className="bg-dark-background" locale="en-GB">
     <QueryClientProvider client={queryClient}>
-      <BrowserRouter basename={process.env.BASEPATH}>
+      <BrowserRouter basename={import.meta.env.VITE_BASEPATH}>
         <App />
       </BrowserRouter>
     </QueryClientProvider>
